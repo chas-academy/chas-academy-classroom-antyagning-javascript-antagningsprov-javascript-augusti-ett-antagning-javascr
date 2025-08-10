@@ -9,7 +9,27 @@ function uppg10(){
     // returnera ett objekt med de tre arrayerna
 
   
-    
+    function sortNumbers(numbers) {
+      const bigEven = [];
+      const smallOdd = [];
+      const other = [];
+  
+      for (let num of numbers) {
+          if (num > 10 && num % 2 === 0) {
+              bigEven.push(num);
+          } else if (num < 10 && num % 2 !== 0) {
+              smallOdd.push(num);
+          } else {
+              other.push(num);
+          }
+      }
+  
+      return { bigEven, smallOdd, other };
+  }
+  
+  // Exempelanrop
+  const result = sortNumbers([2, 5, 12, 15, 8, 23, 9, 10]);
+  console.log(result);
   
   }
   
